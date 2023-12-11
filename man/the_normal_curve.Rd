@@ -4,7 +4,17 @@
 \alias{the_normal_curve}
 \title{normal_curve_shade}
 \usage{
-the_normal_curve(x, mean, sd, col, VerticalSplit, shadeFrom, shadeTo, ...)
+the_normal_curve(
+  x,
+  mean,
+  sd,
+  col,
+  VerticalSplit,
+  shadeFrom,
+  shadeTo,
+  plot_type = "base",
+  ...
+)
 }
 \arguments{
 \item{x}{a sequence of the range of the x-axis}
@@ -19,7 +29,9 @@ the_normal_curve(x, mean, sd, col, VerticalSplit, shadeFrom, shadeTo, ...)
 
 \item{shadeFrom}{The point on the x-axis where the shade should start from}
 
-\item{shadeTo}{The poin on the x-axis where the shade should end at}
+\item{shadeTo}{The point on the x-axis where the shade should end at}
+
+\item{plot_type}{specifies the type of plot if it is base of ggplot}
 
 \item{...}{the is for any other parameters not predefined but can be defined in a plot function}
 }
@@ -34,7 +46,5 @@ normal_curve_shade
 }
 \examples{
 x <- seq(1.5, 10.5, 0.05 )
-          the_normal_curve(x=x, mean = 6, sd = 2, col = "blue", VerticalSplit = 7, shadeFrom = 7, shadeTo = 10.5, ...)
-
-
+          the_normal_curve(x=x, mean = 6, sd = 2, col = "blue", VerticalSplit = 7, shadeFrom = 7, shadeTo = 10.5, plot_type = "ggplot" ...)
 }

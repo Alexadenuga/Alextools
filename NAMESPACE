@@ -3,3 +3,4 @@
 export(compute_square)
 export(the_normal_curve)
 export(the_spark_plot)
+import(ggplot2)
